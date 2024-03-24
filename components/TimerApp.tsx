@@ -95,30 +95,32 @@ const TimerApp = ({hours, minutes, seconds}: Props) => {
           type="number"
           value={inputHours}
           onChange={(e) => setInputHours(e.target.value)}
-          className="block w-24 rounded-md border-0 py-1.5 pl-5 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 py-2 px-4 my-2 mx-2 "
+          className="w-24 rounded-md border-0 py-1.5 pl-5 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 py-2 px-4 mb-2 mx-2 "
           placeholder="Hours"
         />
         <input
           type="number"
           value={inputMinutes}
           onChange={(e) => setInputMinuts(e.target.value)}
-          className="block w-24 rounded-md border-0 py-1.5 pl-5 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 py-2 px-4 my-2 mx-2 "
+          className="w-24 rounded-md border-0 py-1.5 pl-5 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 py-2 px-4 mb-2 mx-2 "
           placeholder="Minuts"
         />
         <input
           type="number"
           value={inputSeconds}
           onChange={(e) => setInputSeconds(e.target.value)}
-          className="block w-24 rounded-md border-0 py-1.5 pl-5 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 py-2 px-4 my-2 mx-2 "
+          className="w-24 rounded-md border-0 py-1.5 pl-5 pr-2 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 py-2 px-4 mb-2 mx-2 "
           placeholder="Seconds"
         />
-        <button onClick={set} className="block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-2 mx-2 rounded">
+        <button onClick={set} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-2 mx-2 rounded">
           Set
         </button>
       </div>
-      <button onClick={start} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-2 mx-2 rounded">Start</button>
-      {/*Pauseボタンを非表示 <button onClick={pause} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-2 mx-2 rounded">Pause</button> */}
-      <button onClick={reset} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-2 mx-2 rounded">Reset</button>
+      <div className='p-8'>
+        <button onClick={start} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-2 mx-2 rounded">Start</button>
+        {/*Pauseボタンを非表示 <button onClick={pause} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-2 mx-2 rounded">Pause</button> */}
+        <button onClick={reset} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-2 mx-2 rounded">Reset</button>
+      </div>
     </div>
   )
 }
